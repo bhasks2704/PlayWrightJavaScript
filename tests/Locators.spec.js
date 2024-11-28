@@ -13,8 +13,8 @@ test('Locating elements using property , css and xpath', async ({page})=>{
     // page.fill('#loginusername','pavanol')
 
     // provide password - CSS
-//    await page.fill("input[id='loginpassword']",'test@123')
-await page.locator('#loginpassword').fill('test@123')
+    //    await page.fill("input[id='loginpassword']",'test@123') not working
+    await page.locator('#loginpassword').fill('test@123')
 
     // click on the login button
    await page.click("//button[normalize-space()='Log in']")
