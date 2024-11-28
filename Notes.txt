@@ -1,0 +1,50 @@
+run
+---------------
+npx playwright test --> runs all the test on all browsers in headless mode
+npx playwright test [file name] -> runs a specific test file 
+npx playwright test [file name] --project=chromium -> runs on specific browser
+npx playwright test [file name] --project=chromium --headed -> runs on specific browser in headed mode.
+npx playwright test --project=chromium --project=webkit --headed -> run on specific browsers in headed mode.
+npx playwright test --project=chromium --headed --debug -> runs in debug mode.
+
+npx playwright codegen -o tests/codegen.spec.js  ->  we can record and stores in file  
+
+Locators
+--------
+property
+css
+xpath
+
+import in two ways
+------------------
+1. const {test, expect } = require{'@playwright/test'}
+2. import {test,expect} from '@playwright/test'
+
+locate single element
+----------------------
+
+link/button
+-------------
+await page.locator('locator').click();
+await page.click('locator');
+
+input box
+---------
+await page.locator('locator').fill("value")
+await page.locator('locator').type("value") -- deprecated
+
+await page.fill("locator","value")
+
+locating multiple web elements
+------------------------------
+const elements = await page.$$(locator)
+
+Locators
+----------------
+page.getByRole() to locate by explicit and implicit accessibility attributes.
+page.getByText() to locate by text content.
+page.getByLabel() to locate a form control by associated label's text.
+page.getByPlaceholder() to locate an input by placeholder.
+page.getByAltText() to locate an element, usually image, by its text alternative.
+page.getByTitle() to locate an element by its title attribute.
+page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
