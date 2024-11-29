@@ -41,7 +41,7 @@ const elements = await page.$$(locator)
 
 page.waitForSelector(locator path) -> it wait for the element to be loaded successfullt in the page then it will continue rest of the execution
 
-Locators
+Locators -> https://playwright.dev/docs/locators
 ----------------
 page.getByRole() to locate by explicit and implicit accessibility attributes.
 page.getByText() to locate by text content.
