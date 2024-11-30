@@ -52,3 +52,6 @@ page.getByTitle() to locate an element by its title attribute.
 page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
 
 Assertions ->https://playwright.dev/docs/test-assertions
+
+Hard Assertions -> if any assertion fails then rest of the script wont be executed.
+Soft Assertion -> failed assertions do not teriminate test execution but mark the test as failed.
