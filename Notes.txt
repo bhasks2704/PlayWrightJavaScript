@@ -54,4 +54,8 @@ page.getByTestId() to locate an element based on its data-testid attribute (othe
 Assertions ->https://playwright.dev/docs/test-assertions
 
 Hard Assertions -> if any assertion fails then rest of the script wont be executed.
+ex: await expect(page).toHaveTitle('STORE')
+
 Soft Assertion -> failed assertions do not teriminate test execution but mark the test as failed.
+    ex:  await expect.soft(page).toHaveTitle('STORE1')
+
