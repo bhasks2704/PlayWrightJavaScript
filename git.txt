@@ -7,3 +7,7 @@ git pull origin main  # Pull the latest changes from the remote `main`
 git merge feature-branch  # Merge the feature branch into main
 
 git push origin main #push the changes from main to the remote 
+
+git branch -d feature-branch #To delete it locally
+
+git push origin --delete feature-branch #To delete it remotely
