@@ -1,0 +1,9 @@
+git add .
+git commit -m "Commit message"
+
+git checkout main   # Switch to the main branch
+git pull origin main  # Pull the latest changes from the remote `main`
+
+git merge feature-branch  # Merge the feature branch into main
+
+git push origin main #push the changes from main to the remote 
