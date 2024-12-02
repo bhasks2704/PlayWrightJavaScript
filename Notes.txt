@@ -59,3 +59,6 @@ ex: await expect(page).toHaveTitle('STORE')
 Soft Assertion -> failed assertions do not teriminate test execution but mark the test as failed.
     ex:  await expect.soft(page).toHaveTitle('STORE1')
 
+Radio and check box :-
+
+await page.locator("//label[@for='radio1']/input[@name='radioButton']").check()
