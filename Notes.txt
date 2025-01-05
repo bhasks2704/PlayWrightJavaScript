@@ -62,3 +62,47 @@ Soft Assertion -> failed assertions do not teriminate test execution but mark th
 Radio and check box :-
 
 await page.locator("//label[@for='radio1']/input[@name='radioButton']").check()
+
+Video:
+    'off' - Do not record video.
+    'on' - Record video for each test.
+    'retain-on-failure' - Record video for each test, but remove all videos from successful test runs.
+    'on-first-retry' - Record video only when retrying a test for the first time.
+
+config.js
+ use: {
+    video: 'on-first-retry',
+  },
+
+Screenshot:
+     // Full page Screenshot
+    // await page.screenshot({path:'screenshot2.png',fullPage:true})
+
+    // element screenshot
+    // await page.locator("(//a[@title='Cart'])[2]").screenshot({path:'screenshot3.png'})
+
+
+TRACE:
+Available options to record a trace:
+
+'on-first-retry' - Record a trace only when retrying a test for the first time.
+'on-all-retries' - Record traces for all test retries.
+'off' - Do not record a trace.
+'on' - Record a trace for each test. (not recommended as it's performance heavy)
+'retain-on-failure' - Record a trace for each test, but remove it from successful test runs.
+
+    npx playwright show-trace path/to/trace.zip
+
+it contains Actions,Selecting each action reveals:
+
+action snapshots
+action log
+source code location
+
+it screen shot is on then it will be visible.
+
+Before	A snapshot at the time action is called.
+Action	A snapshot at the moment of the performed input. This type of snapshot is especially useful when exploring where exactly Playwright clicked.
+After	A snapshot after the action.
+
+source, call ,log,errors, network and metadata,attachemnts.
